@@ -7,6 +7,7 @@ use App\Domain\Tweet;
 final class TweetRepositoryInMemory implements TweetRepository
 {
     private $tweets = [
+        "elon-musk" => [
         "The sun is shining and it's a beautiful day!",
         "I just finished a great book and highly recommend it.",
         "Can't wait to travel again and explore new places!",
@@ -57,7 +58,43 @@ final class TweetRepositoryInMemory implements TweetRepository
         "Trying to focus on the positive and let go of the negative.",
         "I believe in the power of visualization and manifesting our dreams into reality.",
         "I'm grateful for the amazing experiences that life has to offer us.",
-        "Taking time to disconnect and recharge is essential for our well-being.",
+        "Taking time to disconnect and recharge is essential for our well-being."
+        ],
+        "bill-gates" => [
+        "I'm so grateful for the amazing people in my life who inspire me every day.",
+        "Taking time to relax and recharge is so important for our well-being.",
+        "I believe in the power of kindness and compassion to make the world a better place.",
+        "I'm grateful for the opportunity to learn and grow every day.",
+        "Just finished a great book and feeling inspired to make a difference.",
+        "I love spending time with my family and creating memories together.",
+        "Taking care of our mental health is just as important as our physical health.",
+        "I believe in the power of community and supporting one another.",
+        "I'm grateful for the beauty and wonder of the natural world around us.",
+        "Just finished a challenging project and feeling proud of the work we've done.",
+        "I'm so lucky to have such amazing and supportive friends in my life.",
+        "Gratitude is a mindset that can transform our lives and bring us joy.",
+        "I love trying new recipes and experimenting in the kitchen.",
+        "I'm so grateful for the joy and laughter that my pets bring to my life.",
+        "Taking time for self-care is essential for our well-being and happiness.",
+        "I believe that every day is a new opportunity to learn and grow.",
+        "I'm grateful for the amazing experiences that life has to offer us.",
+        ],
+        "jeff-bezos" => [
+        "I'm so grateful for the amazing people in my life who inspire me every day.",
+        "Taking time to relax and recharge is so important for our well-being.",
+        "I believe in the power of kindness and compassion to make the world a better place.",
+        "I'm grateful for the opportunity to learn and grow every day.",
+        "Just finished a great book and feeling inspired to make a difference.",
+        "I love spending time with my family and creating memories together.",
+        "Taking care of our mental health is just as important as our physical health.",
+        "I believe in the power of community and supporting one another.",
+        "I'm grateful for the beauty and wonder of the natural world around us.",
+        "Just finished a challenging project and feeling proud of the work we've done.",
+        "I'm so lucky to have such amazing and supportive friends in my life.",
+        "Gratitude is a mindset that can transform our lives and bring us joy.",
+        "I love trying new recipes and experimenting in the kitchen.",
+        "I'm so grateful for the joy and laughter that my pets bring to my life."
+        ]
     ];
 
 
@@ -69,11 +106,7 @@ final class TweetRepositoryInMemory implements TweetRepository
      */
     public function searchByUserName(string $username, int $limit): array
     {
-        $randomEntries = array_rand($this->tweets, $limit);
-        $tweets        = [];
-        foreach ($randomEntries as $randomEntry) {
-            $tweets[] = new Tweet($this->tweets[$randomEntry]);
-        }
-        return $tweets;
+        //todo implement
+        return $this->tweets;
     }
 }
