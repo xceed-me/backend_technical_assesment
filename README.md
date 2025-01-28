@@ -5,13 +5,13 @@ We want you to implement a REST API that, given a twitter username and a count N
 
 ## Example 
 
-Given these last two tweets from Jack Dorsey:
+Given these last two tweets from Bill Gates:
 - "Just setting up my twttr",
 - "We need a new mobile OS that’s web-only."
 
 The returned response should be:
 ```
-curl -s http://xceedtestapi.com/tweets/jackDorsey?limit=2
+curl -s http://xceedtestapi.com/tweets/bill-gates?limit=2
 [
     "JUST SETTING UP MY TWTTR",
     "WE ONLY NEED A NEW MOBILE OS THAT'S WEB-ONLY"
